@@ -1,5 +1,234 @@
-template-repository (1.0-1) unstable; urgency=medium
+fonts-nanum (20200506-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version
+    - It replaces fonts-nanum-coding
+  * debian/tests/*: Add autopkgtest
+  * debian/control:
+    - Replace debhelper Build-Depends with debhelper-compat
+    - Use debhelper 13
+    - Add Rules-Requires-Root: no
+    - Bump to Standards-Version: 4.5.0
+    - Drop Breaks and Replaces with the old ttf-nanum* and
+      fonts-nanum-gothic-light packages
+  * debian/compat: Dropped
+  * debian/*.lintian-overrides: Add the lintian overrides for
+    truetype-font-prohibits-installable-embedding. It is obviously a
+    mistake by upstream. But Debian can't fix this without violating the
+    SIL OFL or without changing the font names.
+  * debian/{README.source,watch}: Update information on updating upstream
+    version
+  * debian/salsa-ci.yml: Add Salsa CI config
+  * debian/check-config: Dropped. Replaced by debian/tests/checkfonts
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Changwoo Ryu <cwryu@debian.org>  Fri, 15 May 2020 06:37:39 +0900
+
+fonts-nanum (20180306-3) unstable; urgency=medium
+
+  * Add AppStream files for fonts-nanum and fonts-nanum-extra
+  * debian/control:
+    - Standards-Version: 4.4.0
+  * debian/copyright: Update for the AppStream files
+  * debian/{control,README.source}: Update the upstream URL and name
+
+ -- Changwoo Ryu <cwryu@debian.org>  Thu, 18 Jul 2019 18:57:40 -0300
+
+fonts-nanum (20180306-1) unstable; urgency=medium
+
+  * New upstream version
+  * debian/control:
+    - Update Vcs-* to use salsa.debian.org
+    - Use https for the homepage URI
+    - Update Maintainer to use the new debian-fonts list
+    - Standards-Version: 4.1.4
+  * debian/{compat,control}:
+    - Use debhelper 11
+  * debian/copyright:
+    - Use https for the copyright format URI
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sun, 24 Jun 2018 12:59:52 +0900
+
+fonts-nanum (20170925-1) unstable; urgency=medium
+
+  * New upstream version
+  * Remove aliases for Korean MS-Windows/MacOS/GNOME default fonts
+  * debian/control: Standards-Version: 4.1.1
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sun, 03 Dec 2017 20:01:00 +0900
+
+fonts-nanum (20161025-1) unstable; urgency=medium
+
+  * New upstream version
+  * debian/rules: Remove dh_builddeb xz options; good enough defaults
+  * debian/control: Standards-Version: 3.9.8
+  * debian/control: Use secure URLs for Vcs-*
+
+ -- Changwoo Ryu <cwryu@debian.org>  Tue, 21 Feb 2017 02:27:21 +0900
+
+fonts-nanum (20140930-1) unstable; urgency=medium
+
+  * New upstream version
+  * Limit NanumMyeongjo hintstyle up to "slight"
+    - It doesn't look good with stronger grid fitting.
+  * Add debian/README.source and debian/update-upstream.sh
+    - Describes how to update the upstream.
+  * Standards-Version: 3.9.6
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sat, 04 Oct 2014 01:05:11 +0900
+
+fonts-nanum (20131007-6) unstable; urgency=medium
+
+  * Provide Korean replacement of Cantarell, the GNOME default font
+    - This setting might not be appropriate in a font package, but it
+      is much better than using firstly-found ugly Hangul font.
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sat, 27 Sep 2014 14:52:34 +0900
+
+fonts-nanum (20131007-5) unstable; urgency=medium
+
+  * Switch to -8e xz compression level for binary package
+    - For this package, result size of -9e is the same as -8e, while
+      requiring 32 MiB additional space for decompression.
+  * Update and correct the copyright format
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sun, 21 Sep 2014 02:54:12 +0900
+
+fonts-nanum (20131007-4) unstable; urgency=medium
+
+  [ Changwoo Ryu ]
+  * debian/90-fonts-nanum*.conf
+    - Use <accept> instead of <prefer> to define defaults for the MS/Apple
+      Korean fonts, for some users who installed those proprietary fonts
+      themselves.
+    - Set Nanum Pen Script as default Korean font for "cursive".
+  * Move font configs to /usr/share/fontconfig/conf.avail/
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sat, 10 May 2014 08:36:21 +0900
+
+fonts-nanum (20131007-3) unstable; urgency=medium
+
+  [ Changwoo Ryu ]
+  * debian/90-fonts-nanum*.conf
+    - Update font specific hinting settings
+    - Do not fallback to Un-fonts anymore. The current Nanum fonts have
+      enough glyphs.
+    - Set more defaults as Nanum fonts for the MS/Apple fonts and HTML/CSS
+      font face names.
+    - Update (extra)bold fonts style/weight workaround
+  * fonts-nanum-extra recommends fonts-nanum. The 'ExtraBold' fonts needs
+    settings in fonts-nanum.
+  * debian/check-config: development script for checking fontconfig
+
+ -- Changwoo Ryu <cwryu@debian.org>  Tue, 22 Apr 2014 05:27:51 +0900
+
+fonts-nanum (20131007-2) unstable; urgency=medium
+
+  [ Changwoo Ryu ]
+  * Force to disable autohint and enable hinting. These fonts look
+    reasonable only with hinting. Ubuntu 14.04 default should be
+    overridden.
+  * Update the description to reflect the current font families and
+    weights.
+
+ -- Changwoo Ryu <cwryu@debian.org>  Wed, 16 Apr 2014 01:00:55 +0900
+
+fonts-nanum (20131007-1) unstable; urgency=low
+
+  [ Changwoo Ryu ]
+  * New upstream version.
+    - The upstream didn't set a version number on this release so we use
+      the release date.
+    - This release replaces fonts-nanum-gothic-light.
+  * Standards-Version: 3.9.5
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sat, 28 Dec 2013 21:29:00 +0900
+
+fonts-nanum (3.020-3) unstable; urgency=low
+
+  [ Changwoo Ryu ]
+  * Build-Depends on dpkg >= 1.16.2 for dpkg-deb -Sextreme option
+  * Simplify fontconfig config
+  * Standards-Version: 3.9.4
+  * Add Multi-Arch: foreign
+  * Add comment-only debian/watch file
+  * Use Breaks: instead of Conflicts: for package transition
+  * Remove dummy transitional ttf-* packages
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sat, 03 Aug 2013 17:53:08 +0900
+
+fonts-nanum (3.020-2) unstable; urgency=low
+
+  [ Changwoo Ryu ]
+  * Add Pre-Depends: dpkg (>= 1.15.6~) for xz compression
+  * debian/copyright: Fix a typo
+  * Remove the default Korean font settings
+    - fontconfig 2.9.0 already has them
+  * Use maintscript support in dh_installdeb, instead of writing sh script
+    in preinst by hand.
+    - {rm,mv}_conffile require Pre-Depends: dpkg (>= 1.15.7.2)
+  * debian/copyright
+    - debian/* under GPL-3+
+
+  [ Andrew Starr-Bochicchio ]
+  * debian/90-fonts-nanum{-extra}.conf: (Closes: #686693)
+   - Update so that there are not multiple values within
+     test tags as Fontconfig warns that this is not supported.
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sat, 06 Oct 2012 21:06:32 +0900
+
+fonts-nanum (3.020-1) unstable; urgency=low
+
+  [ Changwoo Ryu ]
+  * New upstream release
+  * Move to git
+  * Standards-Version: 3.9.3
+  * Use debhelper 9
+  * Use the copyright format 1.0
+  * Use xz to compress the binary packages
+  * Set the transitional packages' priority as extra
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sun, 03 Jun 2012 01:41:57 +0900
+
+fonts-nanum (3.010-2) unstable; urgency=low
+
+  [ Changwoo Ryu ]
+  * Rename package
+
+ -- Changwoo Ryu <cwryu@debian.org>  Thu, 13 Oct 2011 00:22:03 +0900
+
+ttf-nanum (3.010-1) unstable; urgency=low
+
+  * New upstream release
+  * Move handwriting families and ExtraBold variant to ttf-nanum-extra
+
+ -- Changwoo Ryu <cwryu@debian.org>  Wed, 02 Feb 2011 06:10:08 +0900
+
+ttf-nanum (3.000-1) unstable; urgency=low
+
+  * New upstream release
+  * Standards-Version: 3.9.1
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sun, 10 Oct 2010 04:19:34 +0900
+
+ttf-nanum (2.030-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/90-ttf-nanum.conf:
+    - Clean up
+
+ -- Changwoo Ryu <cwryu@debian.org>  Wed, 22 Sep 2010 06:01:11 +0900
+
+ttf-nanum (2.020-2) unstable; urgency=low
+
+  [ Changwoo Ryu ]
+  * debian/90-ttf-nanum.conf:
+    - Set Nanum fonts as MS Korean fonts aliases
+    - Set Nanum fonts as the Korean default sans-serif and serif
+    - Set fallback fonts when Nanum fonts are selected
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sat, 26 Jun 2010 19:24:52 +0900
+
+ttf-nanum (2.020-1) unstable; urgency=low
+
+  * Initial version (Closes: #584701)
+
+ -- Changwoo Ryu <cwryu@debian.org>  Sun, 06 Jun 2010 05:23:09 +0900

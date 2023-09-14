@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="font">
+  <id>fonts-nanum-extra</id>
+  <name>Nanum extra fonts</name>
+  <summary>Additional Nanum Korean fonts</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>OFL-1.1</project_license>
+  <extends>fonts-nanum</extends>
+  <description>
+    <p>
+ Nanum font families are Korean font families which are intended for
+ use on computer screens. These fonts are good with computer LCD
+ monitors because they have used rich hinting techniques like subpixel
+ rendering.
+    </p>
+    <p>
+ This package includes additional handwriting font families and
+ extra-bold and light forms of the commonly-used Korean font families.
+    </p>
+  </description>
+  <custom>
+    <value key="FontIconText">가나</value>
+    <value key="FontSampleText">다람쥐 헌 쳇바퀴에 타고파</value>
+  </custom>
+  <provides>
+    <font>NanumBarunpen Regular</font>
+    <font>나눔바른펜 Regular</font>
+    <font>NanumBarunpen Bold</font>
+    <font>나눔바른펜 Bold</font>
+    <font>Nanum Brush Script Regular</font>
+    <font>나눔손글씨 붓 Regular</font>
+    <font>Nanum Pen Script Regular</font>
+    <font>나눔손글씨 펜 Regular</font>
+
+    <font>NanumBarunGothic Light</font>
+    <font>나눔바른고딕 Light</font>
+    <font>NanumBarunGothic UltraLight</font>
+    <font>나눔바른고딕 UltraLight</font>
+    <font>NanumBarunGothic YetHangul Regular</font>
+    <font>나눔바른고딕 옛한글 Regular</font>
+
+    <font>NanumGothic Light</font>
+    <font>나눔고딕 Light</font>
+    <font>NanumGothic ExtraBold</font>
+    <font>나눔고딕 ExtraBold</font>
+    <font>NanumGothic Eco Regular</font>
+    <font>나눔고딕 에코 Regular</font>
+
+    <font>NanumMyeongjo ExtraBold</font>
+    <font>나눔명조 ExtraBold</font>
+    <font>NanumMyeongjo Eco Regular</font>
+    <font>나눔명조 에코 Regular</font>
+    <font>NanumMyeongjo YetHangul Regular</font>
+    <font>나눔명조 옛한글 Regular</font>
+
+    <font>NanumSquare ExtraBold</font>
+    <font>나눔스퀘어 ExtraBold</font>
+    <font>NanumSquare Light</font>
+    <font>나눔스퀘어 Light</font>
+
+    <font>NanumSquare_ac Regular</font>
+    <font>나눔스퀘어_ac Regular</font>
+    <font>NanumSquare_ac Light</font>
+    <font>나눔스퀘어_ac Light</font>
+    <font>NanumSquare_ac Bold</font>
+    <font>나눔스퀘어_ac Bold</font>
+    <font>NanumSquare_ac ExtraBold</font>
+    <font>나눔스퀘어_ac ExtraBold</font>
+
+    <font>NanumSquareRound ExtraBold</font>
+    <font>나눔스퀘어라운드 ExtraBold</font>
+    <font>NanumSquareRound Light</font>
+    <font>나눔스퀘어라운드 Light</font>
+  </provides>
+  <url type="homepage">https://hangeul.naver.com/2017/nanum</url>
+  <update_contact>cwryu_AT_debian.org</update_contact>
+</component>

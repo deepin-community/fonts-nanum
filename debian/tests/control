@@ -1,0 +1,2 @@
+Tests: checkfonts
+Depends: fonts-nanum, fonts-nanum-extra, fontconfig
