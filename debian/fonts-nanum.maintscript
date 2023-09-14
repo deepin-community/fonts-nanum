@@ -1,0 +1,2 @@
+rm_conffile /etc/fonts/conf.avail/90-ttf-nanum.conf 3.010-2~ ttf-nanum
+rm_conffile /etc/fonts/conf.avail/90-fonts-nanum.conf 20131007-4~

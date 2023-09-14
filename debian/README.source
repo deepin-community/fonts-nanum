@@ -1,0 +1,21 @@
+Updating the upstream release
+-----------------------------
+
+Unfortunately, it would be very hard to tell what to download if you don't
+read Korean language. Start with Hangul campaign homepage
+https://hangeul.naver.com/ at Naver and follow link with label "나눔글꼴".
+Currently it's https://hangeul.naver.com/2017/nanum. Naver changes this page
+from time to time, so I can't specify the current download link. Find the
+download link for the Windows TTF installation file, usually named as
+"NanumFontSetup_TTF_ALL.zip".
+
+Use debian/update-upstream.sh script to extract and copy the *.ttf files from
+this archive file. For example:
+
+$ sh debian/update-upstream.sh ../NanumFontSetup_TTF_ALL.zip
+
+Note that Naver does not mention any version number on the dowload
+homepage, and the downloaded file does not have such information. So
+the file modified date (YYYYMMDD) is used instead.
+
+ -- Changwoo Ryu <cwryu@debian.org>, Fri, 15 May 2020 00:55:49 +0900

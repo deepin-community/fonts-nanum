@@ -1,0 +1,14 @@
+NanumBarunGothic.ttf usr/share/fonts/truetype/nanum/
+NanumBarunGothicBold.ttf usr/share/fonts/truetype/nanum/
+NanumGothic.ttf usr/share/fonts/truetype/nanum/
+NanumGothicBold.ttf usr/share/fonts/truetype/nanum/
+NanumGothicCoding.ttf usr/share/fonts/truetype/nanum/
+NanumGothicCodingBold.ttf usr/share/fonts/truetype/nanum/
+NanumMyeongjo.ttf usr/share/fonts/truetype/nanum/
+NanumMyeongjoBold.ttf usr/share/fonts/truetype/nanum/
+NanumSquareB.ttf usr/share/fonts/truetype/nanum/
+NanumSquareR.ttf usr/share/fonts/truetype/nanum/
+NanumSquareRoundB.ttf usr/share/fonts/truetype/nanum/
+NanumSquareRoundR.ttf usr/share/fonts/truetype/nanum/
+debian/90-fonts-nanum.conf usr/share/fontconfig/conf.avail/
+debian/fonts-nanum.metainfo.xml usr/share/metainfo/

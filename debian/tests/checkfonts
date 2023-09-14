@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# check file
+
+test `fc-match NanumGothic file`                   = ":file=/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
+test `fc-match NanumGothic:bold file`              = ":file=/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"
+test `fc-match NanumGothic:extrabold file`         = ":file=/usr/share/fonts/truetype/nanum/NanumGothicExtraBold.ttf"
+test `fc-match NanumGothicCoding file`             = ":file=/usr/share/fonts/truetype/nanum/NanumGothicCoding.ttf"
+test `fc-match NanumGothicCoding:bold file`        = ":file=/usr/share/fonts/truetype/nanum/NanumGothicCodingBold.ttf"
+test `fc-match NanumMyeongjo file`                 = ":file=/usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf"
+test `fc-match NanumMyeongjo:bold file`            = ":file=/usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf"
+test `fc-match NanumMyeongjo:extrabold file`       = ":file=/usr/share/fonts/truetype/nanum/NanumMyeongjoExtraBold.ttf"
+test `fc-match "NanumMyeongjo YetHangul" file`     = ":file=/usr/share/fonts/truetype/nanum/NanumMyeongjo-YetHangul.ttf"
+test `fc-match NanumBarunGothic file`              = ":file=/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf"
+test `fc-match NanumBarunGothic:bold file`         = ":file=/usr/share/fonts/truetype/nanum/NanumBarunGothicBold.ttf"
+test `fc-match NanumBarunGothic:light file`        = ":file=/usr/share/fonts/truetype/nanum/NanumBarunGothicLight.ttf"
+test `fc-match NanumBarunGothic:ultralight file`   = ":file=/usr/share/fonts/truetype/nanum/NanumBarunGothicUltraLight.ttf"
+test `fc-match "NanumBarunGothic YetHangul" file`  = ":file=/usr/share/fonts/truetype/nanum/NanumBarunGothic-YetHangul.ttf"
+test `fc-match NanumSquare:light file`             = ":file=/usr/share/fonts/truetype/nanum/NanumSquareL.ttf"
+test `fc-match NanumSquare:regular file`           = ":file=/usr/share/fonts/truetype/nanum/NanumSquareR.ttf"
+test `fc-match NanumSquare:bold file`              = ":file=/usr/share/fonts/truetype/nanum/NanumSquareB.ttf"
+test `fc-match NanumSquare:extrabold file`         = ":file=/usr/share/fonts/truetype/nanum/NanumSquareEB.ttf"
+test `fc-match NanumSquare_ac:regular file`        = ":file=/usr/share/fonts/truetype/nanum/NanumSquare_acR.ttf"
+test `fc-match NanumSquare_ac:bold file`           = ":file=/usr/share/fonts/truetype/nanum/NanumSquare_acB.ttf"
+test `fc-match NanumSquare_ac:light file`          = ":file=/usr/share/fonts/truetype/nanum/NanumSquare_acL.ttf"
+test `fc-match NanumSquare_ac:extrabold file`      = ":file=/usr/share/fonts/truetype/nanum/NanumSquare_acEB.ttf"
+
+# check weight
+
+test `fc-match NanumMyeongjo:bold weight`          = ":weight=200"
+test `fc-match NanumMyeongjo:extrabold weight`     = ":weight=205"
+test `fc-match NanumGothic:bold weight`            = ":weight=200"
+test `fc-match NanumGothic:extrabold weight`       = ":weight=205"
+test `fc-match NanumBarunGothic:bold weight`       = ":weight=200"
+test `fc-match NanumBarunGothic:ultralight weight` = ":weight=40"
+
+# check style
+
+test `fc-match NanumGothic:extrabold style`        = ":style=ExtraBold"
+test `fc-match NanumMyeongjo:extrabold style`      = ":style=ExtraBold"
+test `fc-match NanumSquare:light style`            = ":style=Light"
+test `fc-match NanumSquare:bold style`             = ":style=Bold"
+test `fc-match NanumSquare:extrabold style`        = ":style=ExtraBold"
